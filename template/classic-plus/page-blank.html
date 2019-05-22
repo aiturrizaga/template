@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Meta -->
+  <meta name="description" content="Sistema de notas y asistencias VG">
+  <meta name="author" content="VG">
+
+  <!-- Favicon -->
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png"> -->
+
+  <title>VG20</title>
+
+  <!-- DashForge CSS -->
+  <link rel="stylesheet" href="../../assets/css/dashforge.css">
+  <link rel="stylesheet" href="../../assets/css/dashforge.dashboard.css">
+</head>
+
+<body>
+
+  <style>
+    #sidebar {
+      /* width: 250px; */
+      width: 350px;
+      position: fixed;
+      top: 0;
+      /* left: -250px; */
+      /* right: -250px; */
+      right: -350px;
+      height: 100vh;
+      z-index: 999;
+      /* background: #7386D5; */
+      background: #ffffff;
+      color: #000000;
+      transition: all 0.3s;
+      overflow-y: scroll;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+      /* border-left: 1px solid #cccccc !important; */
+      border-left: 1px solid #e2e5ed;
+    }
+
+    @media screen and (min-width:1024px) {
+      #sidebar {
+        width: 350px;
+        right: -350px;
+        border-left: 1px solid #e2e5ed;
+      }
+    }
+
+    @media only screen and (max-width: 700px) {
+      #sidebar {
+        width: 250px;
+        right: -250px;
+        border-left: 1px solid #e2e5ed;
+      }
+    }
+
+    #sidebar.active {
+      /* left: 0; */
+      right: 0;
+    }
+
+    #dismiss {
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      background: #000000;
+      color: #ffffff;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+  </style>
+
+  <aside class="aside aside-fixed">
+    <div class="aside-header">
+      <a href="#" class="aside-logo">VG<span>20</span></a>
+      <a href="#" class="aside-menu-link">
+        <i data-feather="menu"></i>
+        <i data-feather="x"></i>
+      </a>
+    </div>
+    <div class="aside-body">
+      <div class="aside-loggedin">
+        <div class="d-flex align-items-center justify-content-start">
+          <a href="#" class="avatar"><img src="../../assets/img/img14.jpg" class="rounded-circle" alt=""></a>
+          <div class="aside-alert-link">
+            <a href="#" data-toggle="tooltip" title="Cerrar sesión"><i data-feather="log-out"></i></a>
+          </div>
+        </div>
+        <div class="aside-loggedin-user">
+          <a href="#loggedinMenu" class="d-flex align-items-center justify-content-between mg-b-2"
+            data-toggle="collapse">
+            <h6 class="tx-semibold mg-b-0">John Doe Sanchez</h6>
+            <i data-feather="chevron-down"></i>
+          </a>
+          <p class="tx-color-03 tx-12 mg-b-0">Administrator</p>
+        </div>
+        <div class="collapse" id="loggedinMenu">
+          <ul class="nav nav-aside mg-b-0">
+            <li class="nav-item"><a href="#" class="nav-link"><i data-feather="user"></i> <span>Mi Perfil</span></a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link"><i data-feather="settings"></i> <span>Ajustes</span></a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link"><i data-feather="log-out"></i> <span>Cerrar
+                  Sesión</span></a></li>
+          </ul>
+        </div>
+      </div><!-- aside-loggedin -->
+      <ul class="nav nav-aside">
+        <li class="nav-label">Main</li>
+        <li class="nav-item active"><a href="#" class="nav-link"><i data-feather="activity"></i>
+            <span>Dashboard</span></a></li>
+        <li class="nav-item"><a href="#" class="nav-link"><i data-feather="layers"></i> <span>Notas y
+              asistencias</span></a></li>
+        <li class="nav-item"><a href="#" class="nav-link"><i data-feather="file-text"></i> <span>Reportes</span></a>
+        </li>
+
+        <li class="nav-label mg-t-25">Master</li>
+        <li class="nav-item"><a href="#" class="nav-link"><i data-feather="archive"></i> <span>Malla
+              Curricular</span></a></li>
+        <li class="nav-item"><a href="#" class="nav-link"><i data-feather="bookmark"></i> <span>Semestre</span></a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <div class="content ht-100v pd-0">
+
+    <nav id="sidebar">
+      <div id="dismiss">
+        <i data-feather="arrow-right"></i>
+      </div>
+      <div class="container-fluid" style="padding-top: 18px;">
+        <h3>Hello World</h3>
+      </div>
+    </nav>
+
+    <!-- content-header -->
+    <div class="content-header">
+      <div class="content-search"></div>
+      <nav class="nav justify-content-end">
+        <a href="#" class="nav-link"><i data-feather="help-circle"></i></a>
+        <a href="#" class="nav-link"><i data-feather="grid"></i></a>
+        <a href="#" class="nav-link" id="sidebarCollapse"><i data-feather="list"></i></a>
+      </nav>
+    </div>
+    <!-- end content-header -->
+
+    <div class="content-body">
+      <!-- container -->
+      <div class="container pd-x-0">
+        <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+          <div>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+              </ol>
+            </nav>
+            <h4 class="mg-b-0 tx-spacing--1">Welcome to Dashboard</h4>
+          </div>
+        </div>
+
+        <div class="row row-xs">
+          <div class="col-sm-12 col-lg-12">
+            <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Here your content</h6>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum laboriosam vero ad et atque dolor
+              facere, facilis corporis earum asperiores totam vel placeat pariatur minus deserunt, expedita fugit
+              possimus necessitatibus!</p>
+          </div>
+        </div>
+      </div>
+      <!-- end container -->
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script src="../../lib/feather-icons/feather.min.js"></script>
+  <script src="../../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+  <script src="../../assets/js/dashforge.js"></script>
+  <script src="../../assets/js/dashforge.aside.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#dismiss').on('click', function () {
+        $('#sidebar').removeClass('active');
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').addClass('active');
+        $('.collapse.in').toggleClass('in');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
